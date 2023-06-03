@@ -12,7 +12,7 @@ I have designed a database like the photo below .
 ## Download 
     1- git clone 
     2- cd [project name]
-    3-composer install 
+    3- composer install 
     4- edit .env to configure your database
     5- php artisan migrate: fresh --seed 
     6- php artisan serve
