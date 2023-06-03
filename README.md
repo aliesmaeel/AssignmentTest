@@ -4,7 +4,8 @@
 I have designed a database like the photo below .
 ##### Note 1 :  I put city in orders table so every order is related to a city .
 ##### Note 2 : I put postman collection with project files in the root directory .
-![Screenshot](image.png)
+
+![image](https://github.com/aliesmaeel/AssignmentTest/image.png)
 
 ##requirements
 ### PHP 8
