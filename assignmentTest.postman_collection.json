@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "8d460b53-b9a3-44ec-bae0-9e76fef90ac6",
+		"name": "assignmentTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8563076"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "119|AqflEGTxeani17QfNlqkjUy5fd1qXWdNucDU2lAT",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@test.comfeefseff",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "16|RRjeULj9ASY7XJL6zy7g9tYHyXcK9Ysl8iq3EbYR",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "customerTest",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "4564654644",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "iraq-baghdadfse",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/customer",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerOrdersInCity",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "16|RRjeULj9ASY7XJL6zy7g9tYHyXcK9Ysl8iq3EbYR",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/reports/customerOrdersInCity",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reports",
+						"customerOrdersInCity"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "homs",
+							"disabled": true
+						},
+						{
+							"key": "customer",
+							"value": "ali",
+							"disabled": true
+						},
+						{
+							"key": "date",
+							"value": "2023-06-02",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TotalCountOrdersByCity",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "16|RRjeULj9ASY7XJL6zy7g9tYHyXcK9Ysl8iq3EbYR",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/reports/totalsCountOrdersByCity",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reports",
+						"totalsCountOrdersByCity"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
